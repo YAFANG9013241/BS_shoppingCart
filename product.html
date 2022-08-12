@@ -15,7 +15,19 @@
   <script src="https://kit.fontawesome.com/a6229d3238.js" crossorigin="anonymous"></script>
   <title>購物網-產品頁</title>
   <style>
+    .border-2 {
+      border: 2px solid rgb(134, 142, 150) !important;
+    }
 
+    .btn-outline-secondary:not(:disabled):not(.disabled).active {
+      background-color: rgb(134, 142, 150);
+    }
+
+    .btn-outline-secondary:hover,
+    .btn-outline-secondary.focus,
+    .btn-outline-secondary.active {
+      background-color: rgb(134, 142, 150);
+    }
   </style>
 </head>
 
@@ -25,88 +37,113 @@
   <!--start-->
   <header>
     <nav class="navbar navbar-expand-md navbar-light bg-light py-3">
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-heart"></i> 六角血拼賣賣</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- 先隱藏 md以上顯示 -->
-        <div class="d-none d-md-block px-3" style="width:100%">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">金牌專賣店 <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">禮品區</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">影音商品</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">居家環境</a>
-            </li>
-            <li class="align-self-md-center ml-auto" style="position:relative;">
-              <a class="dropdownndary" href="#" role="button" data-toggle="dropdown">
-                <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                <span class="badge badge-pill badge-danger" style="position:absolute;top:-10px;left:20px;">12</span>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <form class="px-4 py-3" style="width: 350px;">
-                    <p colspan="4" class="mb-2" style="font-size:18px;font-weight:900;">已選擇商品</p>
-                    <table class="table">
-                      <tbody>
-                        <tr>
-                          <th scope="row" width="8%"><a href=""><i class="fa-solid fa-trash-can text-dark"></i></a></th>
-                          <td>金牌西裝</td>
-                          <td width="20%">1件</td>
-                          <td width="20%">$520</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" width="8%"><a href=""><i class="fa-solid fa-trash-can text-dark"></i></a></th>
-                          <td>金牌女裝</td>
-                          <td width="20%">1件</td>
-                          <td width="20%">$480</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <button class="btn btn-primary btn-block"><i class="fa-solid fa-cart-shopping" st></i>結帳去</button>
-                  </form>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- 先顯示 md以上隱藏 -->
-        <div class="d-block d-md-none">
-          <ul class="navbar-nav mt-2">
-            <li class="list-group-item">
-              <a class="nav-link" href="#">金牌專賣店 <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="list-group-item">
-              <a class="nav-link" href="#">禮品區</a>
-            </li>
-            <li class="list-group-item">
-              <a class="nav-link" href="#">影音商品</a>
-            </li>
-            <li class="list-group-item">
-              <a class="nav-link disabled">寵物專用</a>
-            </li>
-            <li class="list-group-item">
-              <a class="nav-link disabled">居家環境</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#"><i class="fa-solid fa-cart-shopping text-secondary fa-2x"></i></a>
-            </li>
-          </ul>
-        </div>
+      <a class="navbar-brand" href="home.html"><i class="fa-solid fa-heart text-info"></i> 六角血拼賣賣</a>
+      <div class="align-self-md-center ml-auto d-none d-md-block" style="position:relative;padding-right: 33px;">
+        <a class="dropdownndary" href="#" role="button" data-toggle="dropdown">
+          <i class="fa-solid fa-cart-shopping fa-2x"></i>
+          <span class="badge badge-pill badge-danger" style="position:absolute;top:-10px;left:20px;">12</span>
+          <!-- dropdown-menu -->
+          <div class="dropdown-menu dropdown-menu-right">
+            <form class="px-4 py-3" style="width: 350px;">
+              <p colspan="4" class="mb-2" style="font-size:18px;font-weight:900;">已選擇商品</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row" width="8%"><a href=""><i class="fa-solid fa-trash-can text-dark"></i></a></th>
+                    <td>金牌西裝</td>
+                    <td width="20%">1件</td>
+                    <td width="20%">$520</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" width="8%"><a href=""><i class="fa-solid fa-trash-can text-dark"></i></a></th>
+                    <td>金牌女裝</td>
+                    <td width="20%">1件</td>
+                    <td width="20%">$480</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-primary btn-block"><i class="fa-solid fa-cart-shopping"></i>結帳去</button>
+            </form>
+          </div>
+        </a>
       </div>
     </nav>
   </header>
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">11</div>
-        <div class="col-md-8">22</div>
+        <!-- breadcrumb -->
+        <div class="col-md-12">
+          <nav>
+            <ol class="breadcrumb bg-transparent pl-0 mb-1">
+              <li class="breadcrumb-item"><a href="#">首頁</a></li>
+              <li class="breadcrumb-item"><a href="#">金牌專賣店</a></li>
+              <li class="breadcrumb-item active" aria-current="page">金牌西裝</li>
+            </ol>
+          </nav>
+        </div>
+        <!-- left -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <aside class="sticky-top pt-2">
+            <div class="form-inline">
+              <h1 class="h2 mr-1">金牌西裝</h1>
+              <sapn class="h4 text-secondary">(加拉哈德版)</sapn>
+            </div>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <span class="text-secondary"><del>售價 $1299</del></span>
+              <div class="form-inline">
+                <h4 class="mb-0 mr-1 align-self-md-baseline text-danger">網路價 NT$</h4>
+                <strong class="mb-0 h3 align-self-md-baseline text-danger">520</strong>
+              </div>
+            </div>
+            <hr />
+            <div class="form-inline align-items-center mb-3">
+              <p class="mb-0 mr-2">尺寸:</p>
+              <div class="btn-group btn-group-sm" role="group">
+                <a class="btn btn-outline-secondary border-2 active" href="#">SM</a>
+                <a class="btn btn-outline-secondary border-2" href="#" role="button">M</a>
+                <a class="btn btn-outline-secondary disabled border-2" href="#" role="button">L</a>
+                <a class="btn btn-outline-secondary border-2" href="#" role="button">XL</a>
+              </div>
+
+            </div>
+            <div class="input-group mb-3">
+              <select type="text" class="form-control mr-1 shadow-none">
+                <option value="1">1 件</option>
+                <option value="2">2 件</option>
+                <option value="3">3 件</option>
+              </select>
+              <button class="btn btn-primary" type="button" id="button-addon2">加入購物車</button>
+            </div>
+          </aside>
+
+        </div>
+        <!-- right -->
+        <div class="col-md-8">
+          <h2 class="pt-2">帥氣的西裝無人能敵</h2>
+          <p class="mb-5">This is a longer card with supporting text below as a natural lead-in to additional content.
+            This
+            content is a little
+            bit longer.</p>
+          <h3 class="text-center">合身剪裁</h3>
+          <img src="https://images.unsplash.com/photo-1472417583565-62e7bdeda490?w=634" class="w-100 mb-5">
+          <h3 class="text-center">簡單就好</h3>
+          <img src="https://images.unsplash.com/photo-1497339100210-9e87df79c218?w=1500" class="w-100 mb-5">
+          <h3 class="text-center">不佔空間</h3>
+          <img src="https://images.unsplash.com/photo-1475530060488-75a6de1dca6f?w=675" class="w-100 mb-4">
+          <section>
+            <div class="p-3 mb-4" style="color: #464a4e;background-color: #e7e8ea;border-color: #dddfe2;">
+              <p class="h2 text-center">購物說明</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, at! Totam, exercitationem repellat.
+                Saepe facere amet
+                expedita perferendis voluptatem dicta dignissimos tempora ut atque, rerum doloribus? Magni, blanditiis.
+                Assumenda,
+                distinctio!</p>
+            </div>
+
+        </div>
       </div>
+    </div>
     </div>
   </main>
   <footer class="bg-light py-5">
